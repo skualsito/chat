@@ -1,0 +1,95 @@
+.contacto {
+  height: 60px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+/* .contacto:hover {
+  opacity: 0.5;
+} */
+.contacto-imagen {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin: 5px 5px 5px 0px;
+}
+
+.contacto-nombre {
+  float: left;
+  width: calc(100% - 60px);
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #000;
+  font-weight: 600;
+}
+
+.contacto-mensaje {
+  float: left;
+  width: calc(100% - 60px);
+  font-size: 12px;
+  margin-left: 5px;
+  color: #bbbac4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contacto-imagen img {
+  width: 100%;
+}
+.contacto.activo {
+  border-right: 10px solid #a7305a;
+}
+
+.contacto:after {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: #c1c1c1;
+  width: 10px;
+  height: 10px;
+  content: " ";
+  border-radius: 50%;
+}
+.contacto.enlinea:after {
+  background: #0cbf76!important;
+}
+.contacto.ocupado:after {
+  background: #f78a00!important;
+}
+.btnAceptar {
+  padding: 0 5px 0 5px!important;
+  color: #10b544!important;
+  font-size: 12px!important;
+  margin: 0;
+  float: left;
+}
+
+.btnCancelar {
+  padding: 0 5px 0 5px!important;
+  color: #b51010!important;
+  font-size: 12px!important;
+  margin: 0;
+  float: left;
+}
+.btn-agregarContacto {
+  margin: 0 auto;
+}
+.nav-tabs .nav-item {
+  cursor: pointer;
+}
+#navbar #headUser{
+  background: #002741;
+}
+#nav_container {
+  background: #001727;
+}
+#navbar #headUser #user #avatar {
+  margin: 5px 70px 5px 70px;
+}

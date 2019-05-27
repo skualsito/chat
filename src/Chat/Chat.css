@@ -1,0 +1,135 @@
+body {
+  background-color: #14112c!important;
+}
+.chat-contenedor{
+  display: flex;
+  flex-wrap: wrap;
+}
+.chat-mensajes {
+  overflow: auto;
+  height: 70vh;
+}
+.chat-input {
+  overflow: hidden;
+  height: 50px;
+  background: #eaeaea;
+  margin: 10px 0;
+  padding: 0px 0px 0px 10px!important;
+}
+
+
+.chat-input input {
+  float: left;
+  width: calc(100% - 50px);
+  margin: 0;
+  border: transparent;
+  background: none;
+  height: 50px;
+}
+
+.chat-input button {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: #000;
+  padding: 0;
+}
+.chat-input button:hover, .chat-input button:active {
+  background: none!important;
+  border: none!important;
+  color: #a7305a!important;
+}
+button:focus {outline:0!important;}
+*:focus {
+  outline: none!important;
+}
+.chat-contenedor {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 15px;
+  padding: 15px;
+}
+.chat-centrado{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.chat-contactos:after {
+  content: " ";
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 45%);
+  width: 1px;
+  height: 90%;
+  background: #eaeaea;
+}
+.chat-info {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.info-contacto {
+  float: left;
+}
+
+.info-imagen {
+  float: left;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.info-imagen img {
+  width: 100%;
+}
+
+.info-nombre {float: left;width: calc(100% - 60px);margin-top: 5px;margin-left: 10px;color: #000;font-weight: 600;}
+
+.info-estado {
+  float: left;
+  width: calc(100% - 60px);
+  font-size: 12px;
+  margin-left: 10px;
+  color: #bbbac4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info-opciones {
+  float: right;
+}
+
+.opciones-boton {
+  cursor: pointer;
+  line-height: 60px;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.opciones-boton:hover {
+  color: #a7305a!important;
+}
+.opciones-botones {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border-radius: 15px;
+  right: 0;
+  bottom: -30px;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 0 10px #d8d8d8;
+  text-align: right;
+}
+.opciones-botones.activo {
+  display: block;
+}
+
+.opciones-botones li {
+  min-width: 60px;
+}

@@ -1,0 +1,32 @@
+.mensaje {
+  width: fit-content;
+  max-width: 90%;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.mensaje-hora {
+  color: #9c9ba9;
+  font-size: 10px;
+}
+
+.mensaje.receptor {
+  background: #a7305a;
+  float: left;
+}
+
+.mensaje.emisor {
+  background: rgb(38, 34, 64);
+  float: right;
+}
+
+.mensaje-texto {
+  color: #fff;
+  white-space: pre-line;
+}
+.mensaje-contenedor {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}

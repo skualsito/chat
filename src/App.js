@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import socketIOClient from "socket.io-client";
+import Chat from './Chat/Chat';
+import Login from './Login/Login';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+const socket = socketIOClient("http://11.11.15.8:8080");
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      pkpersona: 0
+    }
+    this.cambiarPk = this.cambiarPk.bind(this);
+  }
+  componentDidMount(){
+    if (localStorage.getItem('pkpersona') !== '') {
+      //this.setState({pkpersona: parseInt(localStorage.getItem('pkpersona'))});
+    }
+  }
+  cambiarPk(pk){
+    if (pk !== '') {
+      this.setState({pkpersona: pk});
+      localStorage.setItem('pkpersona', pk);
+    }
+  }
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    if (!this.state.pkpersona) {
+      return (
+        <Login socket={socket} pkpersona={this.cambiarPk} />
+      );
+    } else {
+      return (
+        <Chat socket={socket} pkpersona={this.state.pkpersona} />
+      );
+    }
+    
   }
 }
 
